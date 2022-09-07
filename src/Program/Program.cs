@@ -21,20 +21,20 @@ namespace WordsPhrases
             const string text2 = " text2 ";
             const string expected = "text1 text2";
             Phrase phrase = new Phrase();
-            Word word1 = new Word(text1);
-            Word word2 = new Word(text2);
+            Word word1 = new Word(text1.Trim());
+            Word word2 = new Word(text2.Trim());
             phrase.AddWord(word1);
             phrase.AddWord(word2);
             string actual = phrase.GetPhrase();
             //Assert.AreEqual(expected, actual);
 
-            if (actual == expected)
+            if (actual.Trim() == expected.Trim())
             {
-                Console.WriteLine($"Okay, '{actual}' es igual a '{expected}'");
+                Console.WriteLine($"Okay, '{actual.Trim()}' es igual a '{expected.Trim()}'");
             }
             else
             {
-                Console.WriteLine($"Algo salió mal, '{actual}' es difernte de '{expected}'");
+                Console.WriteLine($"Algo salió mal, '{actual.Trim()}' es difernte de '{expected.Trim()}'");
             }
         }
     }

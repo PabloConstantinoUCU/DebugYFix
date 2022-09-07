@@ -52,8 +52,8 @@ namespace WordsPhrases
 
             foreach (Word word in this.words)
             {
-                phrase.Append(" ");
                 phrase.Append(word.Text);
+                phrase.Append(" ");
             }
 
             string result = phrase.ToString();
